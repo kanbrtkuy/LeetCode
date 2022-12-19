@@ -1,8 +1,9 @@
-#Solve the question by deque
-##Time complexity O(n)
-##Space complexity O(n)
-##Code
-'''
+<h1>Solve the question by deque</h1>
+<p>Time complexity O(n)</p>
+<p>Space complexity O(n)</p>
+<p>Code</p>
+
+```java
 class Solution {
     public boolean isPalindrome(String s) {
         String str = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
@@ -41,4 +42,4 @@ class Solution {
 
     }
 }
-'''
+```
