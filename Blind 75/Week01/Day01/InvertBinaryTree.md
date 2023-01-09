@@ -1,5 +1,6 @@
 #Solve this question by recursion
 
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -32,9 +33,11 @@ class Solution {
         return root;
     }
 }
+```
 
 
 #Solve this question by iteration
+```java
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -71,3 +74,4 @@ class Solution {
        return root;
     }
 }
+```
