@@ -1,8 +1,8 @@
 <h1>Solve with postorder traversal</h1>
 
-<p>depth += 1 during preorder traversal</p>
-<p>Give the max value of res and depth to res</p>
-<p>depth -= 1 during postorder traversal</p>
+<p>left + right</p>
+<p>compare</p>
+<p>go back to previous level</p>
 
 ```java
 class Solution {
