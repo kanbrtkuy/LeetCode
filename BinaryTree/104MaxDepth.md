@@ -1,3 +1,7 @@
+解法：\
+前序遍历\
+后续遍历
+
 <h1>Solve with iterative recursion</h1>
 
 <p>depth += 1 during preorder traversal</p>
