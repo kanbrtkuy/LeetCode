@@ -1,4 +1,4 @@
-#Solve with iterative recursion
+<h1>Solve with iterative recursion</h1>
 
 <p>depth += 1 during preorder traversal</p>
 <p>Give the max value of res and depth to res</p>
@@ -29,7 +29,7 @@ class Solution {
 }
 ```
 
-#Solve with factorization
+<h1>Solve with factorization</h1>
 
 <p>Find left depth</p>
 <p>Find right depth</p>
