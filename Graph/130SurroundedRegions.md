@@ -7,30 +7,47 @@
 
 ```java
 class Solution {
- private void DFS(char[][] board,int r,int c,int rsize,int csize){
-        if(r<0||c<0||r==rsize||c==csize||board[r][c]!='O')return;
+    public void dfs(char[][] board, int r, int c, int rLen, int cLen) {
+        if(r<0 || c<0 || r>=rLen || c>=cLen || board[r][c] != 'O') {
+            return;
+        }
+
         board[r][c] = 'P';
-        DFS(board,r+1,c,rsize,csize);
-        DFS(board,r,c+1,rsize,csize);
-        DFS(board,r-1,c,rsize,csize);
-        DFS(board,r,c-1,rsize,csize);
-    } 
+
+
+        dfs(board, r+1, c, rLen, cLen);
+        dfs(board, r, c+1, rLen, cLen);
+        dfs(board, r-1, c, rLen, cLen);
+        dfs(board, r, c-1, rLen, cLen);
+
+
+    }
+
     public void solve(char[][] board) {
-        if(board.length==0)return;
-        int row = board.length,col = board[0].length;
-     
-        for(int i=0;i<col;i++){
-            DFS(board,0,i,row,col);//for FIRST ROW
-            DFS(board,row-1,i,row,col);//for LAST ROW
+
+        int r = board.length;
+        int c = board[0].length;
+
+        for(int i = 0; i < r; i++) {
+            dfs(board, i, 0, r, c);
+            dfs(board, i, c-1, r, c);
         }
-        for(int i=0;i<row;i++){
-            DFS(board,i,0,row,col);//for FIRST COLUMN
-            DFS(board,i,col-1,row,col);//for LAST COLUMN
+
+        for(int i = 0; i < c; i++) {
+            dfs(board, 0, i, r, c);
+            dfs(board, r-1, i, r, c);
         }
-        for(int i=0;i<row;i++)
-            for(int j=0;j<col;j++)
-                if(board[i][j]=='O')board[i][j]='X';
-                else if(board[i][j]=='P')board[i][j]='O';
+
+        for(int i = 0; i < r; i++) {
+            for(int j = 0; j < c; j++) {
+                if(board[i][j] == 'P') {
+                    board[i][j] = 'O';
+                } else {
+                    board[i][j] = 'X';
+                }
+            }
+        }
+        
     }
 }
 ```
