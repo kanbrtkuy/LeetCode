@@ -30,3 +30,37 @@ class ProductOfNumbers {
     }
 }
 ```
+
+```java
+class ProductOfNumbers {
+
+    private List<Integer> time;
+
+    public ProductOfNumbers() {
+
+        time = new ArrayList<>();
+        
+    }
+    
+    public void add(int num) {
+
+        if(time.size() == 0) {
+            time.add(num);
+        } else {
+            time.add(time.get(time.size()-1)*num);
+        }
+
+        if(num == 0) time.clear();
+    }
+    
+    public int getProduct(int k) {
+
+        if(k > time.size()) return 0;
+
+        if(k == time.size()) return time.get(time.size() - 1);
+
+        return time.get(time.size()-1)/time.get(time.size()-1-k);
+        
+    }
+}
+```
