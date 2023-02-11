@@ -1,3 +1,9 @@
+<p>before sum</p>
+<p>[0,0,0,1,0,1,1,0]</p>
+<p>after sum</p>
+<p>[0,-1,-2,-3,-2,-3,-2,-1,-2]</p>
+<p>Find the same number's index and use it delete the lowest index to get the length</p>
+
 ```java
 class Solution {
     public int findMaxLength(int[] nums) {
