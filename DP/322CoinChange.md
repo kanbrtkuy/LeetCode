@@ -69,7 +69,7 @@ class Solution {
 ```java
 class Solution {
     public int coinChange(int[] coins, int amount) {
-        int[] dp = new int[amount + 1];
+        int[] dp = new int[amount + 1]; //该数组是用来记录0-11每个金额下需要的最少硬币数量
         // 数组大小为 amount + 1，初始值也为 amount + 1
         Arrays.fill(dp, amount + 1);
 
